@@ -1,0 +1,17 @@
+
+.*
+!.gitignore
+!.gitmodules
+
+*.4bpp
+*.lz
+*.gbapal
+*.o
+*.dmp
+*.lyn.event
+
+*.gba
+*.elf
+*.sym
+*.sav
+*.ss*

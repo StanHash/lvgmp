@@ -1,0 +1,6 @@
+[submodule "tools/event-assembler"]
+	path = tools/event-assembler
+	url = https://github.com/StanHash/EventAssembler.git
+[submodule "tools/fe8"]
+	path = tools/fe8
+	url = https://github.com/StanHash/fe8.git

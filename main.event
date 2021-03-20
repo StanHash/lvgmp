@@ -1,0 +1,11 @@
+
+    // TODO: fix EA to map its addresses
+
+    #define FREE_SPACE     "(0x08B2A610 - 0x08000000)"
+    #define FREE_SPACE_END "(0x08C00000 - 0x08000000)"
+
+    org FREE_SPACE
+
+        #include "wizardry/fixes.event"
+
+        assert FREE_SPACE_END - currentoffset
