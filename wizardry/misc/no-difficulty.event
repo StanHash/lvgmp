@@ -1,0 +1,21 @@
+
+// remove difficulty selection screen
+// hack by stan
+
+PUSH
+
+    // replace call to start difficulty select proc with the simple function below
+    ORG $A20164
+        POIN SetFixedDifficulty|1
+
+POP
+
+ALIGN 4
+SetFixedDifficulty:
+    SHORT $2201 // mov  r2, #1 @ initial difficulty
+    SHORT $2300 // mov  r3, #0 @ initial mode
+    SHORT $212A // mov  r1, #0x2A
+    SHORT $5442 // strb r2, [r0, r1]
+    SHORT $213D // mov  r1, #0x3D
+    SHORT $5443 // strb r3, [r0, r1]
+    SHORT $4770 // bx   lr

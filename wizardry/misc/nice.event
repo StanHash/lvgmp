@@ -1,0 +1,29 @@
+
+// Make 69% hit chance always hit
+// hack by stan
+
+PUSH
+
+    // Replace BattleRandRoll2Rn
+    ORG $02A558
+        SHORT $4B05 // ldr  r3, =gBattleStats
+        SHORT $881B // ldrh r3, [r3]
+        SHORT $079B // lsl  r3, #30
+        SHORT $D403 // bmi  return_r1
+        SHORT $2845 // cmp  r0, #69
+        SHORT $D003 // beq  return_true
+        SHORT $4B03 // ldr  r3, =RandRoll2Rn
+        SHORT $4718 // bx   r3
+
+        //          // return_r1:
+        SHORT $1C08 // mov  r0, r1
+        SHORT $4770 // bx   lr
+
+        //          // return_true:
+        SHORT $2001 // mov  r0, #1
+        SHORT $4770 // bx   lr
+
+        WORD $0203A4D4 // .word gBattleStats
+        WORD $08000CB9 // .word RandRoll2Rn
+
+POP

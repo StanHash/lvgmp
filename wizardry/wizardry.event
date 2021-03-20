@@ -1,0 +1,8 @@
+
+#include "fixes.event"
+
+#include "misc/no-5x.event"
+#include "misc/no-bonus-levels.event"
+#include "misc/fixed-auto-levels.event"
+#include "misc/no-difficulty.event"
+#include "misc/nice.event"
