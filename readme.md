@@ -14,6 +14,8 @@ Any asset contained within this repository is licenced under [the Unlicence][unl
 
 [unlicence]: ./licence.md
 
+If you believe to be the author of some asset featured in this repository and do not agree to the terms under which it is distributed here, please contact me so we can settle this issue.
+
 ## Contact
 
 I'm `nat5#4387` on Discord. I'm most active within the [Fire Emblem Universe Discord server][discord].
